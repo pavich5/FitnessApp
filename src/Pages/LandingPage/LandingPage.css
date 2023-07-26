@@ -1,0 +1,133 @@
+.LandingPage {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 130px;
+}
+
+.informations {
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+.informations h2 {
+    color: red;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.informations h1 {
+    font-size: 60px;
+    color: black;
+    line-height: 65px;
+    margin-bottom: 20px;
+}
+
+.informations p {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.informations button {
+    width: 180px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: rgb(255, 49, 49);
+    color: white;
+    font-weight: 600;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.image {
+    position: relative; /* Add position relative */
+    z-index: -1; /* Set a lower z-index so it goes behind the header */
+    margin-top: -150px; /* Adjust the margin to overlap the header */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+h1.background-heading {
+    position: relative;
+    font-size: 150px;
+    color: rgb(238, 238, 238);
+    top: 20%;
+    left: 24%;
+    padding: 0 20px; /* Add some padding to adjust the size of the background */
+    margin-top: -90px; /* Adjust the negative margin to position the background */
+    z-index: -1; /* Set a lower z-index so it goes behind the text */
+}
+
+.searchInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.searchInput h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: rgb(255, 20, 20); /* Same color as the button's background */
+}
+
+.searchInput{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.searchInput input {
+    width: 1000px;
+    height: 55px;
+    padding: 0 20px; /* Add some padding inside the input box */
+    border: 2px solid rgb(255, 20, 20);
+    border-radius: 4px 0 0 4px; /* Rounded border on the left */
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.searchInput button {
+    width: 170px;
+    height: 55px;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Rounded border on the right */
+    background-color: rgb(255, 20, 20);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Add some hover effect for the button */
+.searchInput button:hover {
+    background-color: #FF3333; /* Slightly darker shade on hover */
+}
+
+.horizonatalScrollBar{
+    display: flex;
+    
+}
+
+.arrows{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 140px;
+    margin-bottom: 110px;
+}
+
+.arrows button {
+    width: 70px;
+    background-color: transparent;
+    margin-left: 5px;
+    border: none;
+}
+
+.showingResults h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,11 @@
+.excercises {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-left: 70px;
+}
+
+.excercises a {
+    text-decoration: none;
+    color: black;
+}

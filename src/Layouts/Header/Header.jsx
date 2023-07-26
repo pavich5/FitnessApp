@@ -1,0 +1,21 @@
+import { Link } from 'react-router-dom'
+import './Header.css'
+
+const Header = () => {
+  return (
+    <header>
+      <img src="data:image/png;base64,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" alt="" />
+      <nav>
+        <ul>
+          <Link to={'/'}>
+            <li style={{ textDecoration: 'underline', borderBottomColor: 'red', color:'black' }}>Home</li>
+          </Link>
+          <li>Exercises</li>
+        </ul>
+      </nav>
+
+    </header>
+  )
+}
+
+export default Header

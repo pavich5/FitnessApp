@@ -1,0 +1,23 @@
+.HorizontalScroll{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    cursor: pointer;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.HorizontalScroll img {
+    width: 50px;
+    margin-bottom: 50px;
+}
+
+.HorizontalScroll h2 {
+    text-transform: capitalize;
+}
+
+.HorizontalScroll:hover{
+    opacity: 1;
+}

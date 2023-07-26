@@ -1,0 +1,27 @@
+/* SimularExcercise.css */
+.SimularExcercise {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+
+  }
+  .SimularExcercise a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .SimularExcercise h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+  }
+  
+  .exercise-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+

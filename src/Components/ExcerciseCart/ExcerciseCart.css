@@ -1,0 +1,63 @@
+.ExcerciseCart {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 445px;
+    width: 400px;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+    border-bottom-left-radius: 20px;
+    border-top: 4px solid #ff2625;
+    padding-bottom: 10px;
+}
+
+.ExcerciseCart:hover {
+    /* Add the styles for the hover effect here */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Example shadow effect */
+    transform: scale(1.05); /* Example scale-up effect */
+    cursor: pointer;
+}
+
+.ExcerciseCart p {
+    text-transform: capitalize;
+    font-size: 21px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.ExcerciseCart img {
+    height: 326px;
+}
+
+
+.ExcerciseCart button {
+        display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    padding: 6px 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 169, 169);
+    font-size: 14px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    width: 70px;
+    height: 30px;
+    transform: scale(1.1); /* Example scale-up effect */
+}
