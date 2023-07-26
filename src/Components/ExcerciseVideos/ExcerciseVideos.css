@@ -60,6 +60,7 @@
 
     .ExcerciseVideos h1 {
       text-align: center;
+      margin-right: 15px;
     }
     .excerciseVideos{
       display: grid;

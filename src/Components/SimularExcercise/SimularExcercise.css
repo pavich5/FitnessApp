@@ -24,4 +24,8 @@
     justify-content: space-between;
   }
   
-
+  @media screen and (max-width: 391px) {
+    .SimularExcercise{
+      margin-right: 10px;
+    }
+  }
