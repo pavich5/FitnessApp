@@ -167,6 +167,7 @@ h1.background-heading {
 
     .searchInput .input input {
         width: 310px;
+        margin-bottom: 25px;
     }
     .input {
         margin-right: 40px;
@@ -175,7 +176,7 @@ h1.background-heading {
         font-size: 30px;
     }
     .showingResults{
-        margin-right: 30px;
+        margin-right: 40px;
     }
 
     .searchInput{
