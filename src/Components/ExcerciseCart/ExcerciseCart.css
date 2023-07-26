@@ -61,3 +61,12 @@
     height: 30px;
     transform: scale(1.1); /* Example scale-up effect */
 }
+
+@media screen and (max-width: 391px) {
+    .ExcerciseCart{
+        height: 445px;
+        width: 350px;
+        align-items: center;
+        margin-right: 20px;
+    }
+}

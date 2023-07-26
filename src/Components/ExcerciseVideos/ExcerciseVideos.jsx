@@ -15,10 +15,7 @@ const ExcerciseVideos = ({ exerciseVideos,name }) => {
           rel="noreferrer"
         >
           <img style={{ borderTopLeftRadius: '20px' }} src={item.video.thumbnails[0].url} alt={item.video.title} />
-          <div>
             <p>{item.video.title}</p>
-            <p>{item.video.channelName}</p>
-          </div>
         </a>
       ))}
         </div>

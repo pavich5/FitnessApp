@@ -65,10 +65,15 @@
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       justify-items: center;
+      margin-left: 20px;
     }
 
     .exercise-video p {
       font-size: 17px;
-      text-align: center;
+      text-align: left;
+      width: 300px;
+    }
+    .videoInformation{
+      display: flex;
     }
   }

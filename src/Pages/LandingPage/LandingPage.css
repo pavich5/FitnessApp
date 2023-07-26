@@ -177,4 +177,11 @@ h1.background-heading {
     .showingResults{
         margin-right: 30px;
     }
+
+    .searchInput{
+        margin-left: 30px;
+    }
+    .arrows{
+        margin-left: 130px;
+    }
 }
