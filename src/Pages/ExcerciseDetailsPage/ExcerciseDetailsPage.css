@@ -47,3 +47,27 @@
     font-size: 50px;
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 391px) {
+    .excerciseContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .excerciseImage img {
+        width: 400px;
+    }
+
+    .excercaiseDetails h1{
+        text-align: center;
+        font-size: 35px;
+    }
+    .excercaiseDetails p {
+        font-size: 20px;
+        color: rgb(39, 39, 39);
+        text-align: center;
+    }
+    .targets{
+        margin-left: 10px;
+    }
+}

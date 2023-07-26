@@ -9,3 +9,13 @@
     text-decoration: none;
     color: black;
 }
+
+@media screen and (max-width: 391px) {
+ .excercises{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin-right: 10px;
+    justify-content: center;
+ }
+}

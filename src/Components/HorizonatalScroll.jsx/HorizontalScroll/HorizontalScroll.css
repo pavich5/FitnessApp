@@ -21,3 +21,14 @@
 .HorizontalScroll:hover{
     opacity: 1;
 }
+
+@media screen and (max-width: 391px) {
+    .horizonatalScrollBar {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* Display items in a single column */
+      grid-gap: 10px; /* Adjust the gap between items as needed */
+      justify-items: center;
+
+    }
+  }
+  

@@ -50,3 +50,25 @@
   .ExcerciseVideos h1{
     margin-left: 40px;
   }
+
+
+  @media screen and (max-width: 391px) {
+    .ExcerciseVideos{
+      display: flex;
+      align-items: center;
+    }
+
+    .ExcerciseVideos h1 {
+      text-align: center;
+    }
+    .excerciseVideos{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+
+    .exercise-video p {
+      font-size: 17px;
+      text-align: center;
+    }
+  }

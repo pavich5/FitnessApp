@@ -13,9 +13,10 @@ const LandingPage = () => {
   const [isSearched, setIsSearched] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentPageExcercises, setCurrentPageExcercises] = useState(1);
+  const itemsPerPageExcercises = 10;
 
   const itemsPerPageBodyParts = 5;
-  const itemsPerPageExcercises = 10;
+  const [itemsPerPage, setItemsPerPage] = useState(itemsPerPageBodyParts);
 
   const filterExercisesByBodyPart = (bodyPart) => {
     if (!bodyPart) return allExcercises;
@@ -32,6 +33,14 @@ const LandingPage = () => {
     ).slice(0, itemsPerPageExcercises);
 
     return searchedExcercises;
+  };
+
+  const updateItemsPerPage = () => {
+    if (window.innerWidth <= 390) {
+      setItemsPerPage(1);
+    } else {
+      setItemsPerPage(itemsPerPageBodyParts);
+    }
   };
 
   useEffect(() => {
@@ -68,13 +77,23 @@ const LandingPage = () => {
         console.error('Error fetching exercises:', error);
       }
     };
-
+    
     fetchBodyParts();
     fetchAllExercises();
+
+    // Add event listener to update itemsPerPage on window resize
+    window.addEventListener('resize', updateItemsPerPage);
+    return () => {
+      window.removeEventListener('resize', updateItemsPerPage);
+    };
   }, []);
 
-  const totalPagesBodyParts = Math.ceil(bodyParts.length / itemsPerPageBodyParts);
-  const totalPagesExcercises = Math.ceil(isSearched ? filterExercisesBySearch(searchValue).length / itemsPerPageExcercises : filterExercisesByBodyPart(selectedBodyPart).length / itemsPerPageExcercises);
+  const totalPagesBodyParts = Math.ceil(bodyParts.length / itemsPerPage);
+  const totalPagesExcercises = Math.ceil(
+    isSearched
+      ? filterExercisesBySearch(searchValue).length / itemsPerPageExcercises
+      : filterExercisesByBodyPart(selectedBodyPart).length / itemsPerPageExcercises
+  );
 
   const handleNextPageBodyParts = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPagesBodyParts));
@@ -115,21 +134,22 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="horizonatalScrollBar">
-        <>
-          {bodyParts.slice((currentPage - 1) * itemsPerPageBodyParts, currentPage * itemsPerPageBodyParts).map((bodyPart) => (
-            <HorizontalScroll
-              key={bodyPart}
-              body_part={bodyPart}
-              setSelectedBodyPart={setSelectedBodyPart}
-              setIsSearched={setIsSearched}
-            />
-          ))}
-        
+      <>
+          {bodyParts
+            .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+            .map((bodyPart) => (
+              <HorizontalScroll
+                key={bodyPart}
+                body_part={bodyPart}
+                setSelectedBodyPart={setSelectedBodyPart}
+                setIsSearched={setIsSearched}
+              />
+            ))}
         </>
       </div>
 
       <div className="arrows">
-            <button onClick={handlePrevPageBodyParts} disabled={currentPage === 1}>
+      <button onClick={handlePrevPageBodyParts} disabled={currentPage === 1}>
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC6SURBVHgB7dPNDYJAEAXgtxsK2QMDHC3BjsQKxAoswRbsAErwbEzcDrQAYBxXD3iR064hmS8hGX6S9xJ2AKXUEnCerxGJnfuAi2IHa1ouyxoR2NlwcCPjA+PYIaVXOBfEct2ZaIWUNDxluJmGfw6cPLVbDMMZMfW9N977UED2vJZVOyAp3pvLtcnCnGUnjMNGJvd+xx2iM/7rlqvKyb+/hTNAdMQ/aAkt8bNESYnXdFqC8padc1BKqQiegiJ4Qs4BrPgAAAAASUVORK5CYII=" alt="" />
             </button>
             <button onClick={handleNextPageBodyParts} disabled={currentPage >= totalPagesBodyParts}>
