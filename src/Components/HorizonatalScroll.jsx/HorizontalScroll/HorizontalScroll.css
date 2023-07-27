@@ -13,6 +13,7 @@
 .HorizontalScroll img {
     width: 50px;
     margin-bottom: 50px;
+    object-fit: fill;
 }
 .HorizontalScroll:hover {
     transform: scale(1.10); 

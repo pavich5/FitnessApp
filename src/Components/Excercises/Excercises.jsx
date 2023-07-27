@@ -2,7 +2,7 @@ import React from 'react';
 import ExcerciseCart from '../ExcerciseCart/ExcerciseCart';
 import './Excercises.css';
 
-const Excercises = ({ excercises, isSearched, searchedExcercises, currentPage, itemsPerPage, onNextPage, onPrevPage }) => {
+const Excercises = ({ excercises, isSearched, searchedExcercises, currentPage, itemsPerPage, onNextPage, onPrevPage,handleeMuscleGroupScroll}) => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
@@ -17,7 +17,7 @@ const Excercises = ({ excercises, isSearched, searchedExcercises, currentPage, i
             <ExcerciseCart key={exercise.id} excercise={exercise} />
           ))}
     </div>
-          <div className="arrows">
+          <div className="arrows" onClick={handleeMuscleGroupScroll}>
           <button onClick={onPrevPage} disabled={currentPage === 1}>
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC6SURBVHgB7dPNDYJAEAXgtxsK2QMDHC3BjsQKxAoswRbsAErwbEzcDrQAYBxXD3iR064hmS8hGX6S9xJ2AKXUEnCerxGJnfuAi2IHa1ouyxoR2NlwcCPjA+PYIaVXOBfEct2ZaIWUNDxluJmGfw6cPLVbDMMZMfW9N977UED2vJZVOyAp3pvLtcnCnGUnjMNGJvd+xx2iM/7rlqvKyb+/hTNAdMQ/aAkt8bNESYnXdFqC8padc1BKqQiegiJ4Qs4BrPgAAAAASUVORK5CYII=" alt="" />
           </button>

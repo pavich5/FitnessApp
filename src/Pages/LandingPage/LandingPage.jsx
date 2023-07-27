@@ -63,6 +63,7 @@ const LandingPage = () => {
           exerciseOptions
         );
         setBodyParts(data);
+        console.log(bodyParts);
       } catch (error) {
         console.error('Error fetching body parts:', error);
       }
@@ -169,8 +170,8 @@ const LandingPage = () => {
         </>
       </div>
 
-      <div className="arrows">
-        <button onClick={handlePrevPageBodyParts} disabled={currentPage === 1}>
+      <div className="arrows" >
+        <button onClick={handlePrevPageBodyParts} disabled={currentPage === 1} >
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC6SURBVHgB7dPNDYJAEAXgtxsK2QMDHC3BjsQKxAoswRbsAErwbEzcDrQAYBxXD3iR064hmS8hGX6S9xJ2AKXUEnCerxGJnfuAi2IHa1ouyxoR2NlwcCPjA+PYIaVXOBfEct2ZaIWUNDxluJmGfw6cPLVbDMMZMfW9N977UED2vJZVOyAp3pvLtcnCnGUnjMNGJvd+xx2iM/7rlqvKyb+/hTNAdMQ/aAkt8bNESYnXdFqC8padc1BKqQiegiJ4Qs4BrPgAAAAASUVORK5CYII=" alt="" />
         </button>
         <button onClick={handleNextPageBodyParts} disabled={currentPage >= totalPagesBodyParts}>
@@ -187,6 +188,7 @@ const LandingPage = () => {
           itemsPerPage={itemsPerPageExcercises}
           onNextPage={handleNextPageExcercises}
           onPrevPage={handlePrevPageExcercises}
+          handleeMuscleGroupScroll={handleeMuscleGroupScroll}
         />
       </div>
 

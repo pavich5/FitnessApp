@@ -156,17 +156,20 @@ h1.background-heading {
         align-items: center;
         justify-content: normal;
         flex-direction: column;
+        margin-bottom: 60px;
     }
     .informations{
         margin-top: 50px;
     }
     .informations h2 {
         font-size: 30px;
+        margin-bottom: 5px;
     }
 
     .informations h1 {
         font-size: 40px;
         line-height: 40px;
+        margin-bottom: 5px;
     }
 
     .informations p {
