@@ -129,6 +129,9 @@ const LandingPage = () => {
        initial={{ opacity: 0}}
        animate={{ opacity: 1,}}
        transition={{ duration: 1 }}>
+         <div className="phoneImage">
+          <img src="https://img.freepik.com/premium-photo/runner-fitness-woman-with-energy-while-training-running-doing-exercise-against-blue-mockup-studio-background-gym-workout-athlete-girl-with-jump-while-doing-cardio-body_590464-110455.jpg" alt="" />
+        </div>
         <div className="informations">
           <h2>Fitness Club</h2>
           <h1>Sweat, Smile <br /> And Repeat</h1>
@@ -138,6 +141,7 @@ const LandingPage = () => {
         <div className="image">
           <img src="https://jsm-gym.netlify.app/static/media/banner.5209b5e92a864ca0c615.png" alt="" />
         </div>
+       
       </motion.div>
 
       <div className="searchInput">

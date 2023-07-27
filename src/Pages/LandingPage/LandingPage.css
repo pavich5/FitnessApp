@@ -127,6 +127,9 @@ h1.background-heading {
     cursor: pointer;
 }
 
+.phoneImage img {
+    display: none;
+}
 .showingResults h1 {
     text-align: center;
     font-size: 50px;
@@ -141,10 +144,18 @@ h1.background-heading {
     .image{
         display: none;
     }
+    .phoneImage img {
+        display: flex;
+        flex-direction: column-reverse;
+        object-fit: contain;
+        width: 390px;
+        height: 500px;
+    }
     .LandingPage{
         display: flex;
         align-items: center;
         justify-content: normal;
+        flex-direction: column;
     }
     .informations{
         margin-top: 50px;
