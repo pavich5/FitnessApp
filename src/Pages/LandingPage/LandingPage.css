@@ -148,8 +148,8 @@ h1.background-heading {
         display: flex;
         flex-direction: column-reverse;
         object-fit: contain;
-        width: 390px;
-        height: 500px;
+        width: 390;
+        height: 530px;
     }
     .LandingPage{
         display: flex;
