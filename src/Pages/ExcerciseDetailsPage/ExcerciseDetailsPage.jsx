@@ -19,36 +19,35 @@ const ExcerciseDetailsPage = () => {
  const handleeEcercisesScroll = () => {
   excerciseDetailsRef.current.scrollIntoView({ behavior: "smooth" });
 };
-  useEffect(() => {
-    const fetchExerciseData = async () => {
-      const data = localStorage.getItem('allExercises');
-      const allExcercises = JSON.parse(data)
-      setAllExcercises(allExcercises)
-      console.log(allExcercises);
-        const exercise = allExcercises.find((exercise) => exercise.id === exerciseID);
-        setExerciseData(exercise);
-        serExcerciseName(exercise.name)
-    };
+useEffect(() => {
+  const fetchExerciseData = async () => {
+    const data = localStorage.getItem('allExercises');
+    const allExcercises = JSON.parse(data);
+    setAllExcercises(allExcercises);
+    console.log(allExcercises);
+    const exercise = allExcercises.find((exercise) => exercise.id === exerciseID);
+    setExerciseData(exercise);
+    serExcerciseName(exercise.name);
+  };
 
- const fetchYoutubeVideos = async () => {
-  try {
-    const data = await fetchData(
-      `https://youtube-search-and-download.p.rapidapi.com/search?query=${excerciseName} exercise`,
-      youtubeOptions
-    );
-    setExerciseVideos(data.contents);
-    console.log(excerciseName);
-    console.log(data);
-  } catch (error) {
-    console.error("Error fetching exercise videos:", error);
-  }
-};
+  const fetchYoutubeVideos = async () => {
+    try {
+      setTimeout(async () => {
+        const data = await fetchData(
+          `https://youtube-search-and-download.p.rapidapi.com/search?query=${excerciseName} exercise`,
+          youtubeOptions
+        );
+        setExerciseVideos(data.contents);
+      }, 0);
+    } catch (error) {
+      console.error("Error fetching exercise videos:", error);
+    }
+  };
 
-    fetchExerciseData();
-      fetchYoutubeVideos();
+  fetchExerciseData();
+  fetchYoutubeVideos();
+}, [exerciseID, excerciseName]);
 
-
-  }, [exerciseID]);
 
   if (!exerciseData) {
     return <div>Loading...</div>;

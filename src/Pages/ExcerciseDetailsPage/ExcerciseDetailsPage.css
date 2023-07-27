@@ -57,6 +57,7 @@
 
     .excerciseImage img {
         width: 400px;
+        margin-left: 0;
     }
 
     .excercaiseDetails h1{
