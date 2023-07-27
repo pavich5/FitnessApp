@@ -3,7 +3,7 @@ import ExcerciseCart from '../ExcerciseCart/ExcerciseCart';
 import { Link } from 'react-router-dom';
 import './SimularExcercise.css'
 
-const SimularExcercise = ({ allExcercises, excerciseTarget,name }) => {
+const SimularExcercise = ({ allExcercises, excerciseTarget,name,handleeEcercisesScroll}) => {
   const ITEMS_PER_PAGE = 3;
   const [currentPage, setCurrentPage] = useState(1);
   const simularExcercises = allExcercises.filter((exercise) => exercise.target === excerciseTarget);
@@ -24,7 +24,7 @@ const SimularExcercise = ({ allExcercises, excerciseTarget,name }) => {
   return (
     <div className="SimularExcercise">
       <h1>Similar { excerciseTarget} exercises</h1>
-      <div className="exercise-list" >
+      <div className="exercise-list" onClick={handleeEcercisesScroll}>
         {currentExcercises.map((exercise) => (
           <Link to={`/${exercise.id}`} key={exercise.id}
           style={{ textDecoration: 'none', color: 'black' }} 

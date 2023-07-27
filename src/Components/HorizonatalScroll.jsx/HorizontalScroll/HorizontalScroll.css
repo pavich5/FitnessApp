@@ -7,13 +7,19 @@
     cursor: pointer;
     padding: 30px;
     margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out; /* Smooth transition for the hover effect */
 }
 
 .HorizontalScroll img {
     width: 50px;
     margin-bottom: 50px;
 }
-
+.HorizontalScroll:hover {
+    transform: scale(1.10); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    border-radius: 12px;
+    cursor: pointer; 
+  }
 .HorizontalScroll h2 {
     text-transform: capitalize;
 }
@@ -29,8 +35,6 @@
       grid-gap: 10px; /* Adjust the gap between items as needed */
       justify-items: center;
 
-    }
-
-    
+    }    
   }
   

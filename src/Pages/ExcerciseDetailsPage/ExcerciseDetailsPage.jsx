@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './ExcerciseDetailsPage.css'
 import { useParams } from 'react-router-dom';
 import { fetchData,youtubeOptions } from '../../utils/FetchData';
@@ -6,6 +6,7 @@ import ExcerciseVideos from '../../Components/ExcerciseVideos/ExcerciseVideos';
 import SimularExcercise from '../../Components/SimularExcercise/SimularExcercise';
 import SimularEquipment from '../../Components/SimularEquipment/SimularEquipment';
 import { exerciseOptions } from '../../utils/FetchData';
+import { motion } from 'framer-motion';
 const ExcerciseDetailsPage = () => {
   const { id: exerciseID } = useParams();
   const [exerciseData, setExerciseData] = useState(null);
@@ -13,7 +14,11 @@ const ExcerciseDetailsPage = () => {
   const [excerciseName, serExcerciseName] = useState();
   const [allExcercises,setAllExcercises] = useState([])
   
- 
+ const excerciseDetailsRef = useRef(null);
+
+ const handleeEcercisesScroll = () => {
+  excerciseDetailsRef.current.scrollIntoView({ behavior: "smooth" });
+};
   useEffect(() => {
     const fetchExerciseData = async () => {
       const data = localStorage.getItem('allExercises');
@@ -49,7 +54,10 @@ const ExcerciseDetailsPage = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="ExcerciseDetailsPage">
+    <motion.div className="ExcerciseDetailsPage" ref={excerciseDetailsRef}
+    initial={{ opacity: 0}}
+    animate={{ opacity: 1,}}
+    transition={{ duration: 1.5 }}>
       <div className="excerciseContainer">
       <div className="excerciseImage">
       <img src={exerciseData.gifUrl} alt={exerciseData.name} />
@@ -76,12 +84,11 @@ const ExcerciseDetailsPage = () => {
 
    
       </div>
-   
      </div>
-    <ExcerciseVideos exerciseVideos={exerciseVideos} name={excerciseName} />
-    <SimularExcercise allExcercises={allExcercises} excerciseTarget={exerciseData.target} name={excerciseName} />
-    <SimularEquipment allExcercises={allExcercises} excerciseEquipment={exerciseData.equipment} name={excerciseName} />
+    <ExcerciseVideos exerciseVideos={exerciseVideos} name={excerciseName}/>
+    <SimularExcercise allExcercises={allExcercises} excerciseTarget={exerciseData.target} name={excerciseName}  handleeEcercisesScroll={handleeEcercisesScroll}/>
+    <SimularEquipment allExcercises={allExcercises} excerciseEquipment={exerciseData.equipment} name={excerciseName} handleeEcercisesScroll={handleeEcercisesScroll}/>
 
-    </div>
+    </motion.div>
   )}
 export default ExcerciseDetailsPage;

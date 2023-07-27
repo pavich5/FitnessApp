@@ -3,7 +3,7 @@ import './SimularEquipment.css';
 import ExcerciseCart from '../ExcerciseCart/ExcerciseCart';
 import { Link } from 'react-router-dom';
 
-const SimularEquipment = ({ allExcercises, excerciseEquipment }) => {
+const SimularEquipment = ({ allExcercises, excerciseEquipment , handleeEcercisesScroll}) => {
   const simularExcercises = allExcercises.filter((exercise) => exercise.equipment === excerciseEquipment);
   const itemsPerPage = 3;
   const [startIndex, setStartIndex] = useState(0);
@@ -17,7 +17,7 @@ const SimularEquipment = ({ allExcercises, excerciseEquipment }) => {
   };
 
   return (
-    <div className="SimularEquipment">
+    <div className="SimularEquipment" onClick={handleeEcercisesScroll}>
       <h1>Similar {excerciseEquipment} exercises</h1>
       <div className="exercise-list">
         {simularExcercises.slice(startIndex, startIndex + itemsPerPage).map((exercise) => (

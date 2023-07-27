@@ -1,0 +1,77 @@
+/* AboutUs.css */
+.AboutUs {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .hero-section h1 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .about-section,
+  .team-section,
+  .contact-section {
+    margin-bottom: 60px;
+  }
+  
+  .about-section h2,
+  .team-section h2,
+  .contact-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team-member {
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  .team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: contain;
+  }
+  
+  .team-member h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .contact-section a {
+    display: inline-block;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+  

@@ -124,6 +124,7 @@ h1.background-heading {
     background-color: transparent;
     margin-left: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .showingResults h1 {
@@ -131,7 +132,10 @@ h1.background-heading {
     font-size: 50px;
     margin-bottom: 50px;
 }
-
+.horizonatalScrollBar {
+    scroll-behavior: smooth;
+    transition: 2s;
+  }
 
 @media screen and (max-width: 391px) {
     .image{
@@ -185,4 +189,5 @@ h1.background-heading {
     .arrows{
         margin-left: 130px;
     }
+    
 }

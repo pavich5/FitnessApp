@@ -26,6 +26,7 @@
 
 .ExcerciseCart img {
     height: 326px;
+    object-fit: contain;
 }
 
 
