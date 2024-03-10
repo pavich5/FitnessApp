@@ -1,3 +1,8 @@
+This is fitness app that helps begginers learn all the excercies
+
+https://antonio-pavic-jo97.vercel.app/ -- you can check out the page here
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
