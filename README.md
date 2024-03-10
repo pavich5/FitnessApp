@@ -1,5 +1,4 @@
-This is fitness app that helps begginers learn all the excercies
-This is a project from when l was in the first 3 months of learning 
+This is fitness app that helps begginers learn all the excercies,this is also a project from when l was in the first 5 months of learning 
 https://antonio-pavic-jo97.vercel.app/ -- you can check out the page here
 
 
