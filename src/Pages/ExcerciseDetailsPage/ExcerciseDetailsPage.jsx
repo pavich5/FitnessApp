@@ -80,8 +80,6 @@ useEffect(() => {
       <p  style={{color: 'black'}}>{exerciseData.equipment}</p>
       </div>
      </div>
-
-   
       </div>
      </div>
     <ExcerciseVideos exerciseVideos={exerciseVideos} name={excerciseName}/>
